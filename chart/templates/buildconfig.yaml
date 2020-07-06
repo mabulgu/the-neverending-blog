@@ -25,10 +25,13 @@ spec:
   resources: {}
   runPolicy: Serial
   source:
-    sourceStrategy:
-      from:
-        kind: ImageStreamTag
-        name: {{ .Values.build.base_image }}
-        namespace: openshift
-    type: Source
+      binary: {}
+      type: Binary
+    strategy:
+      sourceStrategy:
+        from:
+          kind: ImageStreamTag
+          name: {{ .Values.build.base_image }}
+          namespace: openshift
+      type: Source
   triggers: []
