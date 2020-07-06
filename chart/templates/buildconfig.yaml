@@ -31,4 +31,4 @@ spec:
         name: {{ .Values.build.base_image }}
         namespace: openshift
     type: Source
-  triggers: {}
+  triggers: []
