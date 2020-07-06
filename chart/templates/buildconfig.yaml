@@ -1,4 +1,3 @@
-{{- if .Values.build.enabled }}
 ---
 kind: ImageStream
 apiVersion: image.openshift.io/v1
@@ -26,11 +25,10 @@ spec:
   resources: {}
   runPolicy: Serial
   source:
-    binary: {}
-    type: Binary
-  strategy:
-    type: Docker
-    dockerStrategy:
-      dockerfilePath: {{ .Values.build.source_docker_file_path }}
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: {{ .Values.build.base_image }}
+        namespace: openshift
+    type: Source
   triggers: {}
-{{ end }}
