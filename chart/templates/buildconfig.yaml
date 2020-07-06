@@ -27,11 +27,11 @@ spec:
   source:
       binary: {}
       type: Binary
-    strategy:
-      sourceStrategy:
-        from:
-          kind: ImageStreamTag
-          name: {{ .Values.build.base_image }}
-          namespace: openshift
-      type: Source
+  strategy:
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: {{ .Values.build.base_image }}
+        namespace: openshift
+    type: Source
   triggers: []
