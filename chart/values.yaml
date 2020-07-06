@@ -1,0 +1,16 @@
+app_name: neverending-blog
+replicas: 1
+# build info not used atm
+build:
+  enabled: false
+  build_tag: latest
+  source_docker_file_path: Dockerfile
+# Docker deets
+image_repository: quay.io
+image_name: neverending-blog
+image_namespace: mabulgu
+# likely over written by the Argo definition
+app_tag: latest
+
+# OCP route
+route: true
