@@ -1,12 +1,13 @@
 app_name: neverending-blog
 replicas: 1
-
 # build info not used atm
 build:
   build_tag: latest
   base_image: python:3.6
+image_repository: image-registry.openshift-image-registry.svc:5000
 image_name: neverending-blog
-app_tag: latest
+# likely over written by the Argo definition
+image_tag: latest
 
 # OCP route
 route: true
