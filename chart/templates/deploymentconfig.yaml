@@ -52,6 +52,8 @@ spec:
   - type: ImageChange
     imageChangeParams:
       automatic: true
+      containerNames:
+        - {{ include "neverending-blog.name" . }}
       from:
         kind: ImageStreamTag
         name: {{ .Values.image_name }}:{{ .Values.image_tag }}
