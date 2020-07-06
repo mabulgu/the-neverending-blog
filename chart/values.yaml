@@ -6,6 +6,7 @@ build:
   base_image: python:3.6
 image_repository: image-registry.openshift-image-registry.svc:5000
 image_name: neverending-blog
+image_namespace:
 # likely over written by the Argo definition
 image_tag: latest
 
