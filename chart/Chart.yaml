@@ -1,6 +1,6 @@
 apiVersion: v2
 name: neverending-blog
-description: A Helm chart to deploy the frontend of the Pet Battle
+description: A Helm chart to deploy the NeverEnding Blog
 type: application
 # HelmChart Version
 version: 1.0.1
