@@ -42,19 +42,19 @@ spec:
           timeoutSeconds: 1
         env:
           - name: ENV
-            value: {{ .Values.environment }}
+            value: "{{ .Values.environment }}"
           - name: DATABASE_SERVICE_HOST
-            value: {{ .Values.database.service_host }}
+            value: "{{ .Values.database.service_host }}"
           - name: DATABASE_SERVICE_PORT
-            value: {{ .Values.database.service_port }}
+            value: "{{ .Values.database.service_port }}"
           - name: DATABASE_NAME
-            value: {{ .Values.database.name }}
+            value: "{{ .Values.database.name }}"
           - name: DATABASE_USER
-            value: {{ .Values.database.user }}
+            value: "{{ .Values.database.user }}"
           - name: DATABASE_PASSWORD
             value: {{ .Values.database.password }}
           - name: DJANGO_SECRET_KEY
-            value: {{ .Values.secret_key }}
+            value: "{{ .Values.secret_key }}"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
