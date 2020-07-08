@@ -41,7 +41,7 @@ spec:
           initialDelaySeconds: 10
           timeoutSeconds: 1
         env:
-          - name: ENV
+          - name: APP_ENV
             value: "{{ .Values.environment }}"
           - name: DATABASE_SERVICE_HOST
             value: "{{ .Values.database.service_host }}"
