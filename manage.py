@@ -3,9 +3,11 @@
 import os
 import sys
 
+from the_neverending_blog.env import set_default_env
+
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'the_neverending_blog.settings')
+    set_default_env()
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

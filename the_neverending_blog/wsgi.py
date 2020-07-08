@@ -9,8 +9,10 @@ https://docs.djangoproject.com/en/3.0/howto/deployment/wsgi/
 
 import os
 
+from django.core.exceptions import ImproperlyConfigured
 from django.core.wsgi import get_wsgi_application
+from the_neverending_blog.env import set_default_env
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'the_neverending_blog.settings')
+set_default_env()
 
 application = get_wsgi_application()
