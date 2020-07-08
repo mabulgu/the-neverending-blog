@@ -21,5 +21,5 @@ database:
   password: balthazar
 
 #Django
-secret_key: 'xxub4w!i2$*bb#s5r%od4qepb7i-2@pq+yvna-2sj5d!tc8#8f'
+secret_key: xxub4w!i2$*bb#s5r%od4qepb7i-2@pq+yvna-2sj5d!tc8#8f
 environment: dev
