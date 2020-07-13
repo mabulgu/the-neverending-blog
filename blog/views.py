@@ -1,7 +1,11 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
+from rest_framework.response import Response
+
 from .models import Post
 from .forms import PostForm
+from rest_framework import viewsets
+from .serializers import PostSerializer
 
 
 def post_list(request):
@@ -41,3 +45,13 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+
+class PostViewSet(viewsets.ModelViewSet):
+    serializer_class = PostSerializer
+    queryset = Post.objects.all().order_by('-published_date')
+
+    def list(self, request, *args, **kwargs):
+        request.META['Connection'] = 'close'
+        serializer = self.get_serializer(self.queryset, many=True)
+        return Response(serializer.data)
