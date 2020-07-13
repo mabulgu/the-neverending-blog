@@ -52,6 +52,6 @@ class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all().order_by('-published_date')
 
     def list(self, request, *args, **kwargs):
-        request.META['Connection'] = 'close'
+        request.META['HTTP_CONNECTION'] = 'close'
         serializer = self.get_serializer(self.queryset, many=True)
         return Response(serializer.data)
