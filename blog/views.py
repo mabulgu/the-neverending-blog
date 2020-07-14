@@ -50,8 +50,3 @@ def post_edit(request, pk):
 class PostViewSet(viewsets.ModelViewSet):
     serializer_class = PostSerializer
     queryset = Post.objects.all().order_by('-published_date')
-
-    def list(self, request, *args, **kwargs):
-        request.META['HTTP_CONNECTION'] = 'close'
-        serializer = self.get_serializer(self.queryset, many=True)
-        return Response(serializer.data)
