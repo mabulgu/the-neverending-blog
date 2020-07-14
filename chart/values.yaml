@@ -3,7 +3,7 @@ replicas: 1
 # build info not used atm
 build:
   build_tag: latest
-  base_image: python:3.8
+  base_image: python-38:latest
 image_repository: image-registry.openshift-image-registry.svc:5000
 image_name: neverending-blog
 image_namespace:
