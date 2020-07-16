@@ -1,5 +1,5 @@
 library "openshift-jenkins-shared-libraries"
 
-javaBuildPlugin {
+djangoPlugin {
     appName = "the-neverending-blog"
 }
