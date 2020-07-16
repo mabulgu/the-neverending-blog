@@ -1,5 +1,3 @@
-library "openshift-jenkins-shared-libraries"
-
 pipeline {
     agent {
         label "master"
