@@ -2,7 +2,7 @@ app_name: neverending-blog
 replicas: 1
 # build info not used atm
 build:
-  build_tag: latest
+  build_tag: 3.8
   base_image: registry.redhat.io/rhel8/python-38
 image_repository: image-registry.openshift-image-registry.svc:5000
 image_name: neverending-blog

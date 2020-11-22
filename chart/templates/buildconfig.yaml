@@ -30,8 +30,7 @@ spec:
   strategy:
     sourceStrategy:
       from:
-        kind: ImageStreamTag
+        kind: DockerImage
         name: {{ .Values.build.base_image }}
-        namespace: openshift
     type: Source
   triggers: []
