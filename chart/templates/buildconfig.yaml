@@ -31,6 +31,6 @@ spec:
     sourceStrategy:
       from:
         kind: DockerImage
-        name: {{ .Values.build.base_image }}
+        name: {{ .Values.build.base_image }}:{{ .Values.build.build_tag }}
     type: Source
   triggers: []

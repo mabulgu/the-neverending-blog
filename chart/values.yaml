@@ -2,8 +2,8 @@ app_name: neverending-blog
 replicas: 1
 # build info not used atm
 build:
-  build_tag: 3.8
-  base_image: registry.redhat.io/rhel8/python-38
+  build_tag: latest
+  base_image: quay.io/whoacademy/python-38
 image_repository: image-registry.openshift-image-registry.svc:5000
 image_name: neverending-blog
 image_namespace:
@@ -14,7 +14,7 @@ route: true
 
 # Database
 database:
-  service_host: neverending-db-postgresql
+  service_host: the-neverending-blog-postgresql
   service_port: 5432
   name: neverendingblog
   user: bastian

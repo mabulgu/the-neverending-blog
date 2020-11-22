@@ -63,3 +63,11 @@ spec:
   test: false
   triggers:
   - type: ConfigChange
+  - type: "ImageChange"
+    imageChangeParams:
+      automatic: true 
+      from:
+        kind: "ImageStreamTag"
+        name: "{{ .Values.image_name }}:{{ .Values.image_tag }}"
+      containerNames:
+        - {{ include "neverending-blog.name" . }}
