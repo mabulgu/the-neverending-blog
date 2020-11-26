@@ -14,11 +14,15 @@ route: true
 
 # Database
 database:
-  service_host: the-neverending-blog-postgresql
-  service_port: 5432
+  service_host: mysql
+  service_port: 3306
   name: neverendingblog
   user: bastian
   password: balthazar
+  root_password: falkor12345
+  operations_user: opuser
+  operations_password: bux
+
 
 #Django
 secret_key: xxub4w!i2$*bb#s5r%od4qepb7i-2@pq+yvna-2sj5d!tc8#8f

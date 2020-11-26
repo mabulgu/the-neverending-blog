@@ -1,6 +1,0 @@
-dependencies:
-- name: postgresql
-  repository: https://whoacademy.github.io/helm-charts
-  version: 1.0.0
-digest: sha256:e3eb3b1364b55817871d0eaea26e6cd9e57e558954bd3eacfbb9933326a18260
-generated: "2020-11-22T23:24:32.293528+03:00"
